@@ -71,3 +71,17 @@ void bubbleSortArray() { // procedur untuk mengurutkan array dengan metode bubbl
         cout << endl;
         cout << endl;
     }
+    int main()
+    {
+        input();
+
+        bubbleSortArray();
+        display();
+
+        system("pause");
+        return 0;
+    
+    
+    
+    
+    }
