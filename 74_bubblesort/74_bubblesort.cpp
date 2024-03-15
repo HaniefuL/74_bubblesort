@@ -1,6 +1,3 @@
-// 74_bubblesort.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -30,6 +27,26 @@ void input() {      //procedur untuk input
 
     }
 }
+#include <iostream>
+using namespace std;
+
+void insertionShort() {
+
+    int i, n, temp, j;
+    int arr[12];
+
+    for (i = 1; i <= n - 1; i++) { //step 1
+        temp = arr[i]; //step 2
+        j = i - i; // step 3
+        while (j >= 0 && arr[j] > temp) // step 4
+        {
+            arr[j + 1] = arr[j]; //step 4
+            j = j - 1; // step 4
+        }
+        arr[j + 1] = temp; //step 5
+    }
+
+}
 
 void bubbleSortArray() { // procedur untuk mengurutkan array dengan metode bubble sort
     int pass = 1; // step 1
@@ -52,7 +69,7 @@ void bubbleSortArray() { // procedur untuk mengurutkan array dengan metode bubbl
         } while (pass <= n - 1);
     }
 
-    void display() {
+     void display() {
         cout << endl;
         cout << "=================================" << endl;
         cout << "Element Array yang telah tersusun" << endl;
@@ -70,18 +87,15 @@ void bubbleSortArray() { // procedur untuk mengurutkan array dengan metode bubbl
         cout << "Jumlah Pass = " << n - 1 << endl; // menampilkan jumlah pass
         cout << endl;
         cout << endl;
-    }
-    int main()
-    {
-        input();
+     }
+    
+     int main()
+     {
+         input();
 
-        bubbleSortArray();
-        display();
+         bubbleSortArray();
+         display();
 
-        system("pause");
-        return 0;
-    
-    
-    
-    
-    }
+         system("pause");
+         return 0;
+     } 
